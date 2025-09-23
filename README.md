@@ -37,6 +37,21 @@ python -m http.server 8000
 
 # Abrir en navegador: http://localhost:8000
 
+escobar-e-hijos/
+├── index.html                 # Página principal
+├── styles/
+│   ├── style.css             # Estilos principales
+│   └── responsive.css        # Media queries responsive
+├── js/
+│   ├── main.js               # Funcionalidades principales
+│   ├── api-handler.js        # Manejo de APIs
+│   └── assistant.js          # Mini asistente de campanas
+├── images/
+│   ├── gallery/              # Imágenes de trabajos realizados
+│   ├── icons/                # Iconos y cursor personalizado
+│   └── hero-bg.jpg           # Imagen de fondo del hero
+└── README.md                 # Este archivo
+
 MIT License
 
 Copyright (c) 2025 RoxDev - Ingeniería de Programación
