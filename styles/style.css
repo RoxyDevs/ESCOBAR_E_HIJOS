@@ -1,0 +1,365 @@
+/* ====================
+   RESET Y VARIABLES
+==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #198754;
+    --dark-bg: #1c1c1c;
+    --light-bg: #f8f9fa;
+    --text-light: #fff;
+    --text-dark: #333;
+    --transition: all 0.3s ease;
+    --radius: 10px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ====================
+   GENERAL
+==================== */
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+[data-theme="dark"] {
+    background: var(--dark-bg);
+    color: var(--text-light);
+}
+
+/* ====================
+   NAVBAR
+==================== */
+header {
+    background: var(--primary-color);
+    padding: 10px 20px;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGOS unificados */
+.logo,
+.hero-logo-img,
+.footer-logo {
+    max-height: 80px;
+    width: auto;
+    height: auto;
+}
+
+/* Texto junto al logo */
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu li a:hover {
+    color: var(--secondary-color);
+}
+
+.theme-toggle button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* ====================
+   HERO
+==================== */
+#hero {
+    height: 90vh;
+    background: url("../images/hero-bg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: #146c43;
+}
+
+/* ====================
+   SECCIONES GENERALES
+==================== */
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+}
+
+/* Fade-in animaciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====================
+   SERVICIOS
+==================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .service-card {
+    background: #2a2a2a;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* ====================
+   GALERÍA
+==================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: var(--transition);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ====================
+   FORMULARIO
+==================== */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    outline: none;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+button[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+    background: #0a58ca;
+}
+
+/* ====================
+   CONTACTO
+==================== */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.whatsapp-btn {
+    background: #25d366;
+}
+.email-btn {
+    background: #0072c6;
+}
+.phone-btn {
+    background: #ff7b00;
+}
+
+.contact-btn:hover {
+    opacity: 0.8;
+}
+
+/* ====================
+   FOOTER
+==================== */
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ====================
+   WHATSAPP FLOAT
+==================== */
+.whatsapp-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: var(--shadow);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    opacity: 0.9;
+}

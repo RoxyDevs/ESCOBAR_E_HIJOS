@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escobar e Hijos</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="icon" href="images/gallery/Logo.png" type="image/png">
+
+    <!-- Iconos (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="navbar">
+            <div class="nav-brand">
+                <img src="images/gallery/Logo.png" alt="Logo Escobar e Hijos" class="logo">
+                <span class="brand-text">Escobar e Hijos</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#presupuesto">Presupuesto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="themeBtn"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/gallery/Logo.png" alt="Logo Escobar e Hijos" class="hero-logo-img">
+            </div>
+            <h1>Especialistas en campanas gastronómicas</h1>
+            <p>Fabricación, limpieza de filtros y mantenimiento integral</p>
+            <a href="#contacto" class="cta-button">Solicitar presupuesto</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="container fade-in">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <p>Somos una empresa familiar con años de experiencia en la fabricación y mantenimiento de campanas gastronómicas, ofreciendo soluciones de calidad para cocinas profesionales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+        <div class="container fade-in">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Fabricación</h3>
+                    <p>Diseño y fabricación de campanas gastronómicas adaptadas a cada necesidad.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Limpieza de filtros</h3>
+                    <p>Mantenimiento y limpieza profunda de filtros para un mejor rendimiento.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Mantenimiento</h3>
+                    <p>Servicio técnico especializado en instalaciones gastronómicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="section">
+        <div class="container fade-in">
+            <h2>Galería de trabajos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/gallery/20250520_114959.jpg" alt="Trabajo 1"></div>
+                <div class="gallery-item"><img src="images/gallery/20250521_162309.jpg" alt="Trabajo 2"></div>
+                <div class="gallery-item"><img src="images/gallery/20250522_113422.jpg" alt="Trabajo 3"></div>
+                <div class="gallery-item"><img src="images/gallery/20250805_144243.jpg" alt="Trabajo 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presupuesto -->
+    <section id="presupuesto" class="section">
+        <div class="container fade-in">
+            <h2>Solicitar presupuesto</h2>
+            <form class="budget-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Servicio</label>
+                    <select id="service">
+                        <option value="fabricacion">Fabricación</option>
+                        <option value="limpieza">Limpieza de filtros</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Detalles</label>
+                    <textarea id="details" rows="4"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+        <div class="container fade-in">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rosario, Santa Fe, Argentina</p>
+                    <p><i class="fas fa-phone"></i> +54 341 555-1234</p>
+                    <p><i class="fas fa-envelope"></i> contacto@escobarehijos.com</p>
+                </div>
+                <div class="contact-methods">
+                    <h3><i class="fas fa-share-alt"></i> Medios de contacto</h3>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/543415551234" class="contact-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:contacto@escobarehijos.com" class="contact-btn email-btn"><i class="fas fa-envelope"></i> Correo</a>
+                        <a href="tel:+543415551234" class="contact-btn phone-btn"><i class="fas fa-phone"></i> Teléfono</a>
+                    </div>
+                    <div id="map" style="height:300px; border-radius:10px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="images/gallery/Logo.png" alt="Logo" class="footer-logo">
+                <div class="footer-info">
+                    <h3>Escobar e Hijos</h3>
+                    <p>Especialistas en campanas gastronómicas</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Escobar e Hijos - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/543415551234" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JS -->
+   <script src="js/api-handler.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Maps (con tu API Key) -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Logo - Escobar e Hijos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-container {
+            border: 2px solid #2c5aa0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        img {
+            max-width: 300px;
+            border: 2px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Test de Carga del Logotipo</h1>
+    <p>Este archivo prueba si el logotipo se carga correctamente.</p>
+    
+    <div class="test-container">
+        <h2>1. Probando carga directa del logotipo:</h2>
+        <img src="images/gallery/Logo.png" alt="Test Logo" id="testLogo">
+        <p id="status1">Estado: Probando...</p>
+    </div>
+
+    <div class="test-container">
+        <h2>2. Verificación de ruta:</h2>
+        <p><strong>Ruta usada:</strong> <code>images/gallery/Logo.png</code></p>
+        <p><strong>Estructura esperada:</strong></p>
+        <pre>
+ESCOBARE_HIJOS/
+├── images/
+│   └── gallery/
+│       ├── Logo.png
+│       ├── 20250520_114959.jpg
+│       ├── 20250521_162309.jpg
+│       ├── 20250522_113422.jpg
+│       └── 20250805_144243.jpg
+        </pre>
+    </div>
+
+    <div class="test-container">
+        <h2>3. Soluciones si falla:</h2>
+        <ul>
+            <li>Verificar que el archivo se llame exactamente <strong>Logo.png</strong></li>
+            <li>Confirmar que esté en la carpeta <strong>images/gallery/</strong></li>
+            <li>Probar con diferentes navegadores</li>
+            <li>Verificar la consola del navegador (F12)</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testLogo = document.getElementById('testLogo');
+            const status1 = document.getElementById('status1');
+            
+            testLogo.onload = function() {
+                status1.innerHTML = '<span class="success">✅ Logotipo cargado CORRECTAMENTE</span>';
+                status1.innerHTML += '<br>✓ La ruta es correcta';
+                status1.innerHTML += '<br>✓ El archivo existe';
+                status1.innerHTML += '<br>✓ El formato es compatible';
+            };
+            
+            testLogo.onerror = function() {
+                status1.innerHTML = '<span class="error">❌ Error cargando el logotipo</span>';
+                status1.innerHTML += '<br>✗ Verifica la ruta: images/gallery/Logo.png';
+                status1.innerHTML += '<br>✗ Verifica que el archivo exista';
+                status1.innerHTML += '<br>✗ Verifica el nombre (sensible a mayúsculas)';
+            };
+        });
+    </script>
+</body>
+</html>
