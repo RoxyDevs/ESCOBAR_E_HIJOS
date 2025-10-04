@@ -1,94 +1,178 @@
-/* Tablets */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    
-    .nav-menu {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
-    .section {
-        padding: 60px 0;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
-    }
-    
-    .gallery-item {
-        height: 200px;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .budget-form {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
+/* Nueva Paleta de Colores - Profesional para Gastronomía */
+:root {
+    --primary-color: #2c5530;    /* Verde oscuro - Profesional */
+    --secondary-color: #4a7c59;  /* Verde medio */
+    --accent-color: #8fb996;     /* Verde claro */
+    --text-dark: #2d3748;        
+    --text-light: #718096;       
+    --background: #f7fafc;       
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Móviles */
-@media (max-width: 480px) {
-    .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+[data-theme="dark"] {
+    --primary-color: #38a169;
+    --secondary-color: #2d774b;
+    --accent-color: #68d391;
+    --text-dark: #e2e8f0;
+    --text-light: #a0aec0;
+    --background: #1a202c;
+    --white: #2d3748;
+}
+
+/* Estilos para el chatbot y Facebook */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    display: none;
+}
+
+.facebook-float {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background: #1877f2;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow);
+    z-index: 999;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow);
+    z-index: 999;
+}
+
+/* Resto de estilos para el chatbot (igual que antes) */
+.chatbot-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatbot-body {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el mapa simplificado */
+.simple-map {
+    margin-top: 2rem;
+}
+
+.map-placeholder {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px dashed #ddd;
+}
+
+.map-placeholder i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Facebook en el menú */
+.facebook-menu {
+    color: #1877f2 !important;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 90%;
+        right: 5%;
     }
     
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-card {
-        padding: 2rem 1rem;
-    }
-    
-    .budget-form {
-        padding: 1rem;
-    }
-    
+    .facebook-float,
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 15px;
-        right: 15px;
+        font-size: 1.2rem;
     }
     
-    .whatsapp-float i {
-        font-size: 24px;
+    .facebook-float {
+        bottom: 80px;
     }
 }

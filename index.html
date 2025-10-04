@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escobar e Hijos</title>
+    <title>Escobar e Hijos - Especialistas en Campanas Gastronómicas</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="icon" href="images/gallery/Logo.png" type="image/png">
 
-    <!-- Iconos (FontAwesome) -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Meta Tags Facebook -->
+    <meta property="og:title" content="Escobar e Hijos - Campanas Gastronómicas">
+    <meta property="og:description" content="Fabricación, limpieza de filtros y mantenimiento integral de campanas gastronómicas.">
+    <meta property="og:image" content="images/gallery/Logo.png">
+    <meta property="og:url" content="https://roxydevs.github.io/ESCOBAR_E_HIJOS/">
 </head>
 <body>
-    <!-- Header con logo y navegación -->
+
+    <!-- Header -->
     <header>
         <div class="navbar">
             <div class="nav-brand">
@@ -22,13 +29,16 @@
             <ul class="nav-menu">
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#presupuesto">Presupuesto</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="theme-toggle">
                 <button id="themeBtn"><i class="fas fa-moon"></i></button>
             </div>
+        </div>
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/gallery/images/gallery/20250520_114959.jpg" alt="Banner Principal">
         </div>
     </header>
 
@@ -40,7 +50,7 @@
             </div>
             <h1>Especialistas en campanas gastronómicas</h1>
             <p>Fabricación, limpieza de filtros y mantenimiento integral</p>
-            <a href="#contacto" class="cta-button">Solicitar presupuesto</a>
+            <a href="#presupuesto" class="cta-button">Solicitar presupuesto</a>
         </div>
     </section>
 
@@ -48,8 +58,10 @@
     <section id="nosotros" class="section">
         <div class="container fade-in">
             <h2>Sobre Nosotros</h2>
-            <div class="about-content">
-                <p>Somos una empresa familiar con años de experiencia en la fabricación y mantenimiento de campanas gastronómicas, ofreciendo soluciones de calidad para cocinas profesionales.</p>
+            <div class="centrado">
+                <p style="text-align:center; font-size:1.2rem; line-height:1.6; max-width:800px; margin:auto;">
+                    Somos una empresa familiar con mas de 20 años de experiencia en la fabricación y mantenimiento de campanas gastronómicas, ofreciendo soluciones de calidad para cocinas profesionales. Nos dedicamos a brindar servicios integrales, desde la fabricación, limpieza de filtros, mantenimiento general hasta asesoramiento técnico especializado.
+                </p>
             </div>
         </div>
     </section>
@@ -78,45 +90,30 @@
         </div>
     </section>
 
-    <!-- Galería -->
-    <section id="galeria" class="section">
-        <div class="container fade-in">
-            <h2>Galería de trabajos</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="images/gallery/20250520_114959.jpg" alt="Trabajo 1"></div>
-                <div class="gallery-item"><img src="images/gallery/20250521_162309.jpg" alt="Trabajo 2"></div>
-                <div class="gallery-item"><img src="images/gallery/20250522_113422.jpg" alt="Trabajo 3"></div>
-                <div class="gallery-item"><img src="images/gallery/20250805_144243.jpg" alt="Trabajo 4"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Presupuesto -->
+    <!-- Formulario de Presupuesto -->
     <section id="presupuesto" class="section">
         <div class="container fade-in">
-            <h2>Solicitar presupuesto</h2>
-            <form class="budget-form">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Servicio</label>
-                    <select id="service">
-                        <option value="fabricacion">Fabricación</option>
-                        <option value="limpieza">Limpieza de filtros</option>
-                        <option value="mantenimiento">Mantenimiento</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="details">Detalles</label>
-                    <textarea id="details" rows="4"></textarea>
-                </div>
-                <button type="submit">Enviar</button>
+            <h2>Consulta tu presupuesto</h2>
+            <form id="form-presupuesto">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo" required>
+                
+                <label>Servicios:</label>
+                <select name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="campanas">Fabricación de Campanas Gastronómicas</option>
+                    <option value="filtros">Limpieza de Filtros</option>
+                    <option value="zigueria">Ziguería</option>
+                    <option value="herreria">Herrería General</option>
+                    <option value="mantenimiento">Mantenimiento General</option>
+                    <option value="galpones">Limpieza de Galpones</option>
+                    <option value="albanileria">Albañilería</option>
+                    <option value="pintura">Pintura</option>
+                </select>
+                
+                <textarea name="mensaje" placeholder="Detalles de la consulta"></textarea>
+                
+                <button type="submit">Enviar Consulta</button>
             </form>
         </div>
     </section>
@@ -127,16 +124,21 @@
             <h2>Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Rosario, Santa Fe, Argentina</p>
+                    <h3><i class="fas fa-map-marker-alt"></i> Pasaje Espinillo 4062, depto 2</h3>
+                    <p>Rosario, Santa Fe, Argentina</p>
                     <p><i class="fas fa-phone"></i> +54 341 555-1234</p>
-                    <p><i class="fas fa-envelope"></i> contacto@escobarehijos.com</p>
+                    <p><i class="fas fa-envelope"></i> ramone4062@gmail.com</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ramon.escobar.38668" target="_blank" class="social-link facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </div>
                 </div>
                 <div class="contact-methods">
                     <h3><i class="fas fa-share-alt"></i> Medios de contacto</h3>
                     <div class="contact-buttons">
                         <a href="https://wa.me/543415551234" class="contact-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="mailto:contacto@escobarehijos.com" class="contact-btn email-btn"><i class="fas fa-envelope"></i> Correo</a>
+                        <a href="mailto:ramone4062@gmail.com" class="contact-btn email-btn"><i class="fas fa-envelope"></i> Correo</a>
                         <a href="tel:+543415551234" class="contact-btn phone-btn"><i class="fas fa-phone"></i> Teléfono</a>
                     </div>
                     <div id="map" style="height:300px; border-radius:10px;"></div>
@@ -155,21 +157,44 @@
                     <p>Especialistas en campanas gastronómicas</p>
                 </div>
             </div>
+            
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Escobar e Hijos - Todos los derechos reservados</p>
+            <p>&copy; 2025 Escobar e Hijos - Todos los derechos reservados</a></p><p></p>Desarrollado por <a href="https://linktr.ee/roxdev" target="_blank">RoxDev</a></p>
         </div>
     </footer>
 
-    <!-- Botón flotante WhatsApp -->
+    <!-- WhatsApp flotante -->
     <a href="https://wa.me/543415551234" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JS -->
-   <script src="js/api-handler.js"></script>
-<script src="js/main.js"></script>
-<!-- Google Maps (con tu API Key) -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot-container">
+        <div class="chatbot-header" onclick="toggleChat()">
+            <span>💬 ¿Necesitas ayuda?</span>
+            <span class="chatbot-toggle">−</span>
+        </div>
+        <div class="chatbot-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    ¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api-handler.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+
 </body>
 </html>
