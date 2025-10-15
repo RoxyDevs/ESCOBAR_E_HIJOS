@@ -116,7 +116,6 @@ h2 {
 .logo {
     height: 40px;
     width: auto;
-    filter: brightness(0) invert(1);
     transition: opacity 0.3s;
 }
 
@@ -172,7 +171,6 @@ h2 {
 .hero-logo-img {
     height: 120px;
     width: auto;
-    filter: brightness(0) invert(1);
     transition: opacity 0.3s;
 }
 
