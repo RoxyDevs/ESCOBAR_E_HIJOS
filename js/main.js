@@ -20,6 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         themeSwitcher.textContent = theme === 'light' ? '🌙' : '☀️';
     }
 
+    // Menú móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+
     // Navegación suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -31,6 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+                // Cerrar menú móvil al hacer clic en un enlace
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
                 }
             }
         });

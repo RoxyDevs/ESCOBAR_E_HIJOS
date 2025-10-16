@@ -80,7 +80,7 @@ h2 {
 
 /* Estilos del header/hero */
 #hero {
-    height: 100vh;
+    height: 90vh; /* Reducido de 100vh */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), #2c5aa0;
     background-size: cover;
     background-position: center;
@@ -126,6 +126,15 @@ h2 {
     font-weight: 700;
 }
 
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -165,23 +174,23 @@ h2 {
 
 /* Logotipo en el hero */
 .hero-logo {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Reducido */
 }
 
 .hero-logo-img {
-    height: 120px;
+    height: 100px; /* Reducido */
     width: auto;
     transition: opacity 0.3s;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Reducido */
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reducido */
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
@@ -681,11 +690,6 @@ h2 {
     color: white;
 }
 
-.linkedin {
-    background: #0077B5;
-    color: white;
-}
-
 /* Footer */
 footer {
     background-color: var(--bg-secondary);
@@ -781,27 +785,41 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row; /* Cambiado a row */
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+        justify-content: space-between; /* Espacio entre logo y menú */
         padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar en móvil */
     }
     
     .nav-brand {
-        margin-bottom: 1rem;
+        margin-bottom: 0; /* Eliminado el margen inferior */
     }
     
     .nav-menu {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        background-color: rgba(0,0,0,0.9); /* Fondo para el menú */
+        width: 100%; /* Ocupar todo el ancho */
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column; /* Apilar verticalmente */
+        transition: max-height 0.3s ease-out;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        max-height: 500px; /* Altura máxima para mostrar */
+        padding: 1rem 0;
     }
     
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Reducido */
     }
     
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1.1rem; /* Reducido */
     }
     
     .hero-logo-img {
@@ -859,14 +877,12 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    .nav-menu a {
+        font-size: 0.9rem; /* Reducido */
     }
     
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Reducido */
     }
     
     .hero-content p {
